@@ -1,0 +1,129 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+\documentclass[a4paper]{amsart}
+
+
+% packages
+\usepackage{amssymb,amsmath,amsthm,amsfonts,amscd}
+\usepackage{setspace} 
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{mdframed}
+\usepackage[final]{pdfpages}
+\usepackage{tikz}
+\usetikzlibrary{matrix, arrows, decorations.pathmorphing}
+% \usepackage[retainorgcmds]{IEEEtrantools}
+% \def\noqed{\renewcommand{\qedsymbol}{}}   
+% \usepackage{fullpage}
+
+
+
+% theorem environments with italic font
+\newtheorem{thm}{Theorem}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{question}[thm]{Question}
+\newtheorem{procedure}[thm]{Procedure}
+
+
+% theorem environments with roman font (use lower-case version in body
+% of text, e.g., \begin{example} rather than \begin{Example})
+\newtheorem{Definition}[thm]{Definition}
+\newenvironment{definition}
+{\begin{Definition}\rm}{\end{Definition}}
+\newtheorem{Example}[thm]{Example}
+\newenvironment{example}
+{\begin{Example}\rm}{\end{Example}}
+
+
+% special sets
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\zz}{\mathbb{Z}_{\ge 0}}
+
+
+% arrows
+\newcommand{\ra}{\rightarrow}
+\newcommand{\rra}{\Rightarrpw}
+\newcommand{\surj}{\twoheadrightarrow}
+\newcommand{\inj}{\hookrightarrow}
+\newcommand{\stk}[1]{\stackrel{#1}{\ra}}
+
+
+% IEEEeqnarray
+\newcommand{\ieee}[1]{\begin{IEEEeqnarray*}{rCl}#1\end{IEEEeqnarray*}}
+
+
+% leftsub
+\newcommand{\leftsub}[2]{{\vphantom{#2}}_{#1}{#2}}
+
+
+% other frequently used shorthands
+\newcommand{\se}{\subseteq}
+\newcommand{\tensor}{\otimes}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\ip}[1]{\langle#1\rangle}
+\newcommand{\dual}{^*}
+\newcommand{\inverse}{^{-1}}
+\newcommand{\norm}[2]{\|#1\|_{#2}}
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\Abs}[1]{\bigg| #1 \bigg|}
+\newcommand{\bm}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand{\set}[1]{\{#1\}}
+
+
+%pagestyle
+\pagestyle{fancy}
+\lhead{}\chead{} \rhead{}
+\lfoot{} \cfoot{Page \thepage} \rfoot{} 
+%\renewcommand{\headrulewidth}{0.4pt} \renewcommand{\footrulewidth}{0pt}
+%
+\setlength{\headsep}{0.3in}
+%\setlength\parindent{0em}
+%
+\thispagestyle{empty}
+%\spacing{1.5}
+
+
+\begin{document}
+
+\begin{center}
+\large\textsc{ <++>}\\
+\end{center}
+
+<++>
+
+% bibliography
+%\bibliography{.bib}
+% \bibliographystyle{plain}
+% \nocite{*}
+
+\begin{center}
+\noindent\rule{4cm}{.5pt}
+\vspace{.25cm}
+
+\noindent {\sc \small {Tianyuan Xu}}\\
+{\small Department of Mathematics, University of Oregon, Eugene OR 97403} \\
+Email: {\tt {tianyuan@uoregon.edu}}
+\end{center}
+
+
+\end{document}

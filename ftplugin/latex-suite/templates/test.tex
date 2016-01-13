@@ -1,0 +1,85 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+
+
+
+
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath,amsthm,mathrsfs}
+\usepackage{fullpage}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{booktabs} 
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\def\noqed{\renewcommand{\qedsymbol}{}}   
+
+ % Theorem environments with italic font
+\newtheorem{thm}{Theorem}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{question}[thm]{Question}
+
+% Theorem environments with roman font (use lower-case version in body
+% of text, e.g., \begin{example} rather than \begin{Example})
+\newtheorem{Definition}[thm]{Definition}
+\newenvironment{definition}
+{\begin{Definition}\rm}{\end{Definition}}
+\newtheorem{Example}[thm]{Example}
+\newenvironment{example}
+{\begin{Example}\rm}{\end{Example}}
+
+\newcommand{\topic}[1]{\flushleft\textbf{\emph{#1}}}
+\newcommand{\itopic}[2]{\flushleft\textbf{\emph{#1}}\\ \begin{itemize}{#2}\end{itemize}}
+\newcommand{\ihomework}[2]{\flushleft\textbf{{#1}}\\ \begin{itemize}{#2}\end{itemize}}
+\newcommand{\set}[2]{\{#1 : #2\}}
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\fen}[1]{\textbf{[#1pts]}}
+\newcommand{\vs}{\vspace}
+\newcommand{\ra}{\rightarrow}
+
+
+
+
+
+\pagestyle{fancy}
+% Put course number (e.g., 251) in left header and test title (e.g., Quiz 1) in right header.
+\lhead{Math <++>} \rhead{<++> } 
+\lfoot{} \cfoot{Page \thepage} \rfoot{} 
+\renewcommand{\headrulewidth}{0.4pt} \renewcommand{\footrulewidth}{0pt}
+
+\setlength{\headsep}{0.4in}
+\setlength\parindent{0em}
+
+\thispagestyle{empty}
+\spacing{1.5}
+
+\begin{document}
+
+
+\begin{center}
+% course number and test title
+  \large{\textsc{<++>}}\\
+  Name: \underline{\hspace{1.5in}}
+\end{center}
+
+\begin{enumerate}
+% put points worth in \fen and start first item
+  \item\fen{<++>} <++> 
+\end{enumerate}
+
+
+\end{document}

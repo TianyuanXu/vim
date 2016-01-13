@@ -1,0 +1,97 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+
+
+
+
+\documentclass[compress]{beamer}
+%[compress] makes all navigation bars as small as possible (default=[uncompressed]).
+
+\usepackage{amsthm}
+\usepackage{amsmath,amssymb}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{beamerthemeshadow}
+
+%\usetheme{Berkeley}
+%\usetheme{Warsaw}
+%\usetheme{Antibes}
+%\usetheme{Dresden}
+%\usetheme{berlin}
+%\usetheme{Malmoe}
+%\usetheme{Madrid}
+%\usetheme{Warsaw}
+
+%%% complete color themes
+%\usecolortheme{seagull}
+%\usecolortheme{albatross} 
+%\usecolortheme{beetle} 
+%\usecolortheme{crane} 
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+
+%%% outer color themes, from light to dark
+%\usecolortheme{seahorse}
+%\usecolortheme{dolphin}
+\usecolortheme{whale}
+
+%%% inner color themes, from light to dark
+%\usecolortheme{lily}
+%\usecolortheme{rose}
+% *** \usecolortheme{orchid} 
+
+% to disable the navigation icons
+\setbeamertemplate{navigation symbols}{} 
+% footline, subsection
+\useoutertheme[footline=authortitle, subsection=false]{miniframes}
+
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rn}[1]{\mathbb{R}^#1}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\oneline}{\\*[1Em]}
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm} 
+
+
+\theoremstyle{plain}% default
+\newtheorem{thm}{Theorem}[section]
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\theoremstyle{definition}
+\newtheorem{pf}{Proof}[section]
+\theoremstyle{plain}
+\newtheorem{cor}{Corollary}[section]
+\theoremstyle{plain}% default
+\newtheorem{qst}{Question}[section]
+\theoremstyle{plain}% default
+\newtheorem{ans}{Answer}[section]
+\theoremstyle{plain}% default
+\newtheorem{obs}{Observation}[section]
+\theoremstyle{plain}% default
+\newtheorem{assm}{Assumptions}[section]
+\theoremstyle{plain}% default
+\newtheorem{conj}{Conjecture}[section]
+
+
+\title{ <++>}
+\author{Tianyuan Xu}
+%\institute{}
+\date{<++>}
+
+\begin{document}
+
+\section{<++>}
+\frame{
+\frametitle{<++>}
+<++>
+\pause
+}
+
+\end{document}
+
