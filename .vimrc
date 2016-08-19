@@ -2,6 +2,13 @@
 set nocompatible
 
 
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Package Management
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -78,32 +85,16 @@ if exists(":Tabularize")
   nnoremap <leader>at :Tabularize /<bar><CR>
 endif
 
-set t_Co=256
 
-set wrap
-set tw=79
-set formatoptions+=t
 
-set colorcolumn=80
-"hi ColorColumn ctermbg=grey guibg=grey
 
-" default colorscheme
-
-colorscheme Tomorrow-Night    " great for python, good for latex
-
-autocmd BufEnter * colorscheme default
-autocmd BufEnter *.tex colorscheme hybrid
-autocmd BufEnter *.py colorscheme Tomorrow-Night
-
-"colorscheme hybrid            " great for latex, not so good for python
-"colorscheme lucius            " good for latex, not so good for python
-"colorscheme distinguished 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Various Basic Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " no swap file
 set noswapfile
 " set nobackup
-
-
 
 "syntax highlighting
 syntax on
@@ -124,7 +115,6 @@ set hid
 " show matching brackets when text indicator is over them
 set showmatch
 
-
 " highlight searches
 " set hlsearch
 
@@ -136,8 +126,6 @@ set smartcase
 " the same indent as the line you're currently on. Useful for READMEs, etc.
 set autoindent
 set smartindent
-
-
 
 " stop certain movements from always going to the first character of a line.
 " While this behavior deviates from that of Vi, it does what most users
@@ -151,13 +139,15 @@ set ruler
 " always display the status line
 set laststatus=2
 
-" instead of failing a command because of unsaved changes, instead raise a dialogue asking if you wish to save changed files
+" instead of failing a command because of unsaved changes, instead raise a
+" dialogue asking if you wish to save changed files
 set confirm
 
 " enable use of the mouse for all modes
 set mouse=a
 
-" set the command window height to 2 lines, to avoid cases of having to "press enter to continue"
+" set the command window height to 2 lines, to avoid cases of having to "press
+" enter to continue"
 set cmdheight=2
 
 " display line numbers on the left
@@ -168,18 +158,46 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Colors and Wrapping
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+set t_Co=256
+
+set wrap
+set tw=79
+set formatoptions+=t
+
+set colorcolumn=80
+"hi ColorColumn ctermbg=grey guibg=grey
+
+" default colorscheme
+colorscheme distinguished
+"colorscheme codeschool
+"colorscheme Tomorrow-Night    " great for python, good for latex
+"colorscheme hybrid            " great for latex, not so good for python
+"colorscheme lucius            " good for latex, not so good for python
+"colorscheme distinguished 
+autocmd BufEnter * colorscheme default
+autocmd BufEnter *.shtml colorscheme codeburn
+autocmd BufEnter *.tex colorscheme hybrid
+autocmd BufEnter *.py colorscheme Tomorrow-Night
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Latex Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
 " shortcut for compilation of tex files
 map \wl :w<Enter>\ll
 map \ws :w<Enter>\ll\ls
-
-
-" automatically entering and exiting brackets
-autocmd FileType python inoremap () ()<Esc>i
-autocmd FileType python inoremap [] []<Esc>i
-autocmd FileType python inoremap {} {}<Esc>i
-autocmd FileType python inoremap "" ""<Esc>i
-autocmd FileType python inoremap $$ $$<Esc>i
-autocmd FileType python inoremap <C-j> <Esc>/[)}"'$\]>]<CR>a
 
 " IMPORTANT: grep will sometimes skip displaying the file name if you
 " search in a singe file. This will confuse Latex-Suite. Set your grep
@@ -192,5 +210,21 @@ set grepprg=grep\ -nH\ $*
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
+
+
+            
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Shortcuts to speed up typing
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+" automatically entering and exiting brackets
+autocmd FileType python inoremap () ()<Esc>i
+autocmd FileType python inoremap [] []<Esc>i
+autocmd FileType python inoremap {} {}<Esc>i
+autocmd FileType python inoremap "" ""<Esc>i
+autocmd FileType python inoremap $$ $$<Esc>i
+autocmd FileType python inoremap <C-j> <Esc>/[)}"'$\]>]<CR>a
 
 
