@@ -27,6 +27,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'jaxbot/browserlink.vim'
 
 
 " The following are examples of different formats supported.
@@ -212,11 +213,21 @@ let g:tex_flavor='latex'
 
 
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" HTML settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" preview html file in firefox
+nnoremap \wh :silent update<Bar>silent !firefox %:p &<CR>
+
+
+
             
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcuts to speed up typing
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 
 
 " automatically entering and exiting brackets
@@ -226,5 +237,3 @@ autocmd FileType python inoremap {} {}<Esc>i
 autocmd FileType python inoremap "" ""<Esc>i
 autocmd FileType python inoremap $$ $$<Esc>i
 autocmd FileType python inoremap <C-j> <Esc>/[)}"'$\]>]<CR>a
-
-
